@@ -1,0 +1,21 @@
+body{
+	width: 100%;
+}
+
+#atass{
+
+	height: 200px;
+	width: auto;
+}
+
+#juduls h1{
+	font-size: 60px;
+}
+
+#napil{
+	margin-left: -10px;
+}
+
+#tabb{
+	position: relative;
+}

@@ -1,0 +1,246 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  height: 100%;
+  width: 100%;
+}
+
+/*-----header----------*/
+.navbar-default{
+  background-color: #adb6c6;
+}
+
+header a{
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: none;
+  font-family: Arial;
+  font-size: 15px;
+}
+
+header ul{
+  margin: 0;
+  padding: 0;
+}
+
+header li{
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+  text-decoration: none;
+}
+
+header #logo { 
+  margin-top: 10px;
+  float: left;
+  color: white;
+}
+
+header nav{
+  float: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+header a:hover{
+  color: white;
+  font-weight: bold;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+#icon-profile{
+  border-radius: 100%;
+  border-style: none;
+}
+/*------------main------------*/
+
+.contain{
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.carousel-caption {
+  top: 50%; 
+  text-transform: uppercase;
+  font-style: sans-serif;
+}
+
+#showcase{
+  min-height: 400px;
+  background: #C40000 no-repeat 0;
+  background-size: 100%;
+  padding: 15px;
+  border-bottom: gray 4px solid;
+  font-family: sans-serif;
+  font-size: 20px;
+  text-align: center;
+  opacity: 0.85;
+}
+
+
+#showcase h1{
+  margin-top: 100px;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+#showcase p{
+  font-size: 30px;
+}
+
+
+#Startproject{
+  min-height: 400px;
+  background: white;
+}
+
+
+#Startproject p{
+  font-size: 18px;
+  margin-bottom: 25px;
+  margin-left: 90px;
+  margin-right: 90px;
+  text-align: justify;
+}
+
+
+#Startproject li{
+  font-size: 18px;
+  margin-bottom: 25px;
+  margin-left: 180px;
+  margin-right: 180px;
+  text-align: justify;
+  list-style-type: circle;
+}
+
+#abcde{
+  min-height: 400px;
+  background: url(./img/elderscrollshowcase.jpg) no-repeat 0;
+  background-size: 100%;
+  
+}
+
+#newsletter{
+  padding: 20px;
+  background-color: #d0d8e5;
+  padding-bottom: 60px;
+}
+
+#newsletter h1{
+  float: left;
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+#newsletter form{
+  float: right;
+  margin-top: 25px;
+}
+
+#newsletter input[type="email"]{
+  padding: 8px;
+  height: 50px;
+  width: 400px;
+  font-size: 25px;
+}
+
+.btn_submitsubscribe{
+  height: 55px;
+  background: grey;
+  font-weight: bold;
+  border: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+/*----------footer-------------*/
+
+#footer{
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  background-color: #adb6c6;
+  margin-top: 100px;
+  clear: both;
+  padding: 20px 0px;
+}
+
+.ftr-wrapper{
+   text-align: center;
+   margin-bottom: 30px;
+   font-size: 20px;
+}
+
+.ftr-wrapper ul{
+  display: inline-block;
+  margin-left: 20px;
+  list-style: none;
+  color: white; 
+}
+
+.ftr-wrapper ul a{
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+}
+
+.ftr-social-icons{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.ftr-social-icons ul{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.ftr-social-icons ul li{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0px 10px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.ftr-social-icons ul li a{
+  color: #000;
+  font-size: 25px;
+}
+
+.ftr-social-icons ul li a i{
+  line-height: 50px;
+}
+
+.ftr-bottom-section-wrapper{
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.ftr-bottom-section-wrapper a{
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+
+.footer-address {
+  display: inline;
+  font-style: normal
+}
