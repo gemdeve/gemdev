@@ -13,8 +13,8 @@
 		$retrieveemail= query("SELECT email from users where username='$username'")[0];
 		$retrieveprofile= query("SELECT * from users_detail where email = (SELECT email FROM users WHERE username ='$username')")[0];
 
-		/*$lokasi = [["location"=>"Jakarta"],["location"=>"Bandung"],["location"=>"Surabaya"]];
-		var_dump($lokasi);*/
+		$lokasi = [["location"=>"Jakarta"],["location"=>"Bandung"],["location"=>"Surabaya"]];
+		
 
 		if(isset($_POST["submitpassword"])) {
 		$passlama = $_POST["passlama"];
