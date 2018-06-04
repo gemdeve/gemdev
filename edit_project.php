@@ -10,6 +10,7 @@
 		require 'databases/upload.php';
 		$username = $_SESSION["userName"];
 		$retrieveemail= query("SELECT email from users where username='$username'")[0];
+			$retrieveprofile= query("SELECT * from users_detail where email = (SELECT email FROM users WHERE username ='$username')")[0];
 
 		$retrieveproject= query("SELECT * from project where id_project = '$id_project'")[0];
 
@@ -127,7 +128,7 @@
 										<a class='nav-link' href='./settings.php' style='color:black'>Settings</a>
 										<a class='nav-link' href='./logout.php' style='color:black'>Logout</a>"
 										data-html="true">
-									<img src="./img/no-pic.png" width="25" height="25">
+									<img src = "account/<?php echo $retrieveprofile["filefotoprofil"]; ?>" width='25' height='25'/>
 								</button>
 							</li>					
 						</ul>
@@ -210,18 +211,18 @@
 		</div>
 
 		<div class="form-group">
-				<label class="badge badge-success">Funding Duration :</label>	
+				<label class="badge badge-success">Funding Duration (Days):</label>	
 				<select class="form-control" name="funding_duration" required="">
 
 				<?php if ($retrieveproject["funding_duration"]=="") : ?>
-					<option value ="10">10</option>
+					<option value="10">10</option>
 					<option value="20">20</option>
 					<option value="30">30</option>
 
 				<?php else : ?>
 					<option value="<?php echo $retrieveproject["funding_duration"]; ?>"><?php echo $retrieveproject["funding_duration"]; ?></option>
 					<?php foreach($fd as $l) : ?>
-						<?php if($l["fd"] != $retrieveproject["funding_duration"]) : ?>
+						<?php if($l["fdu"] != $retrieveproject["funding_duration"]) : ?>
 							<option value="<?php echo $l["fdu"]; ?>"><?php echo $l["fdu"]; ?></option>
 						<?php endif; ?>
 					<?php endforeach; ?>

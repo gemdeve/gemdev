@@ -4,14 +4,15 @@
 		header("Location: login.php");
 		exit();
 	}
-
+	require 'databases/upload.php';
 	require_once("databases/Database.php");
 	require_once("databases/users.php");
 	$id_project = $_GET['id'];
 	var_dump($id_project);
 	$db = new users();
+	$username = $_SESSION["userName"];
 	$project = isset($id_project) ? $db->select_by_id_project($id_project) : array ();
-
+	$retrieveprofile= query("SELECT * from users_detail where email = (SELECT email FROM users WHERE username ='$username')")[0];
 	if ($_POST) {
 		$id_project = trim($_POST['id_project']);
 		if ($db->delete_project($id_project)) {
@@ -32,6 +33,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+	img {
+    border-radius: 50%;
+	}
+	</style>
 	<title>Create Project</title>
 	<meta charset="utf-8">
 	<!--------------------------------------------my own css and bootstrap css-------------------------->
@@ -63,7 +69,7 @@
 										<a class='nav-link' href='./settings.php' style='color:black'>Settings</a>
 										<a class='nav-link' href='./logout.php' style='color:black'>Logout</a>"
 										data-html="true">
-									<img src="./img/no-pic.png" width="25" height="25">
+									<img src = "account/<?php echo $retrieveprofile["filefotoprofil"]; ?>" width='25' height='25'/>
 								</button>
 							</li>					
 						</ul>
