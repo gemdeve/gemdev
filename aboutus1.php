@@ -42,9 +42,9 @@
 										<a class='nav-link' href='./settings.php' style='color:black'>Settings</a>
 										<a class='nav-link' href='./logout.php' style='color:black'>Logout</a>"
 										data-html="true">
-									<img src="./img/no-pic.png" width="25" height="25">
+									<img src = "account/<?php echo $retrieveprofile["filefotoprofil"]; ?>" width='25' height='25'/>
 								</button>
-							</li>					
+							</li>
 						</ul>
 				</nav>
 		</div>
@@ -98,7 +98,7 @@
 				</p><br>
 
 				<p>
-					<img src="./img/mic.jpg">
+					<img src="./img/test2.jpg">
 					<br>
 					Nama : Michael
 					<br>
@@ -112,7 +112,7 @@
 		</div>
 	</section>
 
-	<footer id="footer">
+<footer id="footer">
 		<div class=ftr-wrapper>
 			<ul>
 				<a href="./aboutus1.php">ABOUT US</a> | <a href="./contact1.php">CONTACT</a>
@@ -157,6 +157,6 @@
 		}).blur(function() {
     	$(this).popover('hide');
 		});
-	</script>	
+	</script>
 </body>
 </html>	
