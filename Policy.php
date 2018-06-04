@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,21 +18,23 @@
 						<ul>
 							<li class="nav-item active"><a class="nav-link" href="./home.php">Home</a></li>
 							<li class="nav-item active"><a class="nav-link" href="./StartProject.php">Start Project</a></li>
-							<li class="nav-item active">
+
+    						<li class="nav-item active">
 								<button type="button" class="btn" id="icon-profile" data-toggle="popover" 
 										data-placement="bottom" 
-										data-trigger="focus"
+										data-trigger="manual"
 										data-content="
-										<li class='nav-item active'><a class='nav-link' href='./login.php' style='color:black'>Login</a></li>
-										<li class='nav-item active'><a class='nav-link' href='./register.php' style='color:black'>Signup</a></li>"
+										<a class='nav-link' href='./login.php' style='color:black'>Login</a>
+										<a class='nav-link' href='./register.php' style='color:black'>Signup</a>"
 										data-html="true">
 									<img src="./img/no-pic.png" width="25" height="25">
 								</button>
-							</li>
+							</li>					
 						</ul>
 				</nav>
 		</div>
 	</header>
+
 	<section id="Policy">
 		<div class="contain">
 			<h1>Privacy Policy</h1>
@@ -179,7 +182,6 @@
 			<ul>
 				<li><a href="https://www.facebook.com/GemDev-1233795066722877/" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
 				<li><a href="https://twitter.com/gemdev2"  target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
-			
 			</ul>
 		</div>
 	
@@ -214,6 +216,6 @@
 		}).blur(function() {
     	$(this).popover('hide');
 		});
-	</script>
+	</script>	
 </body>
 </html>
