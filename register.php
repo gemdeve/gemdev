@@ -74,8 +74,8 @@
 					<nav>
 						<ul>
 							<li class="nav-item active"><a class="nav-link" href="./home.php">Home</a></li>
-							<li class="nav-item active"><a class="nav-link" href="#startproject">Start Project</a></li>
-							<li class="nav-item active"><a class="nav-link" href="./signin.php">Sign In</a></li>
+							<li class="nav-item active"><a class="nav-link" href="./StartProject.php">Start Project</a></li>
+							<li class="nav-item active"><a class="nav-link" href="./login.php">Sign In</a></li>
 						</ul>
 					</nav>
 		</div>
@@ -106,10 +106,5 @@
 		</div>
 	</section>
 	
-		
-
-	<!-------------------------------------------js cdn---------------------------------------------->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
