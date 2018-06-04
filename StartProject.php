@@ -40,12 +40,8 @@
          	  		<br><br><br>
        				<table class="center" border="0">
        					<tr>
-       						<td style="width:50%" rowspan="2"><img src="./img/uncharted10.jpg"></td>
-       						<td style ="padding-left:80px"><img src="./img/elderscrolll.jpg"></td>
-       					</tr>
-
-       					<tr>
-       						<td style ="padding-left:80px"><img src="./img/warframee.jpg"></td>
+       						<td><img src="./img/elderscrolll.jpg"></td>
+       						<td style ="padding-left:140px" colspan="2"><img src="./img/warframee.jpg"></td>
        					</tr>
        				</table>
        				<br>
