@@ -28,21 +28,23 @@
 						<ul>
 							<li class="nav-item active"><a class="nav-link" href="./home1.php">Home</a></li>
 							<li class="nav-item active"><a class="nav-link" href="list_project_user.php">List Project</a></li>
-							<li class="nav-item dropdown">
-      						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Project</a>
-      							<div class="dropdown-menu">
-        							<a class="dropdown-item" href="./created_project.php">Created Project</a>
-        							<a class="dropdown-item" href="./add_project.php">Add Project</a>
-        							<a class="dropdown-item" href="./backed_project.php">Backed Project</a></div>
-    						</li>
 
-    						<li class="nav-item dropdown">
-      						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><?= $NAMA?></a>
-      							<div class="dropdown-menu">
-        							<a class="dropdown-item" href="./Profile.php">Profile</a>
-        							<a class="dropdown-item" href="./settings.php">Settings</a>
-        							<a class="dropdown-item" href="./logout.php">Logout</a></div>
-    						</li>					
+    						<li class="nav-item active">
+								<button type="button" class="btn" id="icon-profile" data-toggle="popover" 
+										data-placement="bottom" 
+										data-trigger="manual"
+										title='Welcome , <?= $NAMA?>'
+										data-content="
+										<a class='nav-link' href='./created_project.php' style='color:black'>Created Project</a>
+										<a class='nav-link' href='./add_project.php' style='color:black'>Add Project</a>
+										<a class='nav-link' href='./backed_project.php' style='color:black'>Backed Project</a>
+										<a class='nav-link' href='./profile.php' style='color:black'>Profile</a>										
+										<a class='nav-link' href='./settings.php' style='color:black'>Settings</a>
+										<a class='nav-link' href='./logout.php' style='color:black'>Logout</a>"
+										data-html="true">
+									<img src = "account/<?php echo $retrieveprofile["filefotoprofil"]; ?>" width='25' height='25'/>
+								</button>
+							</li>
 						</ul>
 				</nav>
 		</div>
@@ -185,7 +187,7 @@
 		</div>
 	</section>
 
-	<footer id="footer">
+<footer id="footer">
 		<div class=ftr-wrapper>
 			<ul>
 				<a href="./aboutus1.php">ABOUT US</a> | <a href="./contact1.php">CONTACT</a>
@@ -196,6 +198,7 @@
 			<ul>
 				<li><a href="https://www.facebook.com/GemDev-1233795066722877/" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
 				<li><a href="https://twitter.com/gemdev2"  target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+			</ul>
 		</div>
 	
 		<div class="ftr-bottom-section-wrapper">
@@ -205,8 +208,30 @@
 			<a href="Terms1.php">Terms of Use</a> | <a href="./Policy1.php">Privacy Policy</a>
 		</div>
 	</footer>
-	!-------------------------------------------js cdn---------------------------------------------->
+	<!-------------------------------------------js cdn---------------------------------------------->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".box").on("click", "li", function(){
+				var tabsId = $(this).attr("id");
+				$(this).addClass("active").siblings().removeClass("active");
+				$("#" + tabsId + "-content-box").addClass("active").siblings().removeClass("active");
+			})
+		})
+	</script>
+	<script type="text/javascript">
+		$(function () {
+  			$('[data-toggle="popover"]').popover()
+		})
+	</script>
+	<script type="text/javascript">
+		$('[data-trigger="manual"]').click(function() {
+    	$(this).popover('toggle');
+		}).blur(function() {
+    	$(this).popover('hide');
+		});
+	</script>
 </body>
 </html>	
